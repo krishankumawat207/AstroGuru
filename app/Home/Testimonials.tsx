@@ -1,5 +1,8 @@
 "use client";
 import Image from "next/image";
+import amitabh_bachan from "../../public/amitabh-bachchan.jpeg"
+import Rani_Mukherjee from "../../public/Rani-Mukherjee.jpeg"
+import virat_kohli from "../../public/virat-kohli.webp"
 
 const Testimonials = () => {
   const testimonials = [
@@ -8,21 +11,21 @@ const Testimonials = () => {
       title: "Legendary Bollywood Actor",
       review:
         "AstroGuru’s insights have guided me throughout my journey, helping me navigate the challenges of life with wisdom and strength. Truly remarkable.",
-      image: "amitabh-bachchan.jpeg",
+      image:amitabh_bachan,
     },
     {
       name: "Rani Mukherjee",
       title: "Famous Bollywood Actress",
       review:
         "The guidance I received from AstroGuru was not only accurate but deeply insightful. It helped me make the right decisions in both my personal and professional life.",
-      image: "Rani-Mukherjee.jpeg",
+      image:Rani_Mukherjee ,
     },
     {
       name: "Virat Kohli",
       title: "Indian Cricket Captain",
       review:
         "AstroGuru’s advice has been a key factor in my performance. Their precise readings and cosmic insights give me confidence before every match.",
-      image: "virat-kohli.webp",
+      image: virat_kohli,
     },
   ];
 
