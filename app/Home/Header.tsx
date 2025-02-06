@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
+import Image from "next/image"; // Added for image optimization
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -12,17 +13,20 @@ const Header: React.FC = () => {
   return (
     <header className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white sticky top-0 z-50 shadow-xl">
       <div className="px-6 py-4 max-w-7xl w-full flex items-center justify-between">
-        <div className="flex items-center space-x-2">      <img
-            src="logo.jpeg"
+        <div className="flex items-center space-x-2">
+          <Image
+            src="/logo.jpeg" // Use next/image for optimization
             alt="Gurushisya Logo"
             className="w-12 h-12 rounded-full"
+            width={48} // Defined width
+            height={48} // Defined height
           />
-        <div className="text-3xl font-extrabold tracking-wide">
-          <Link href="/">
-            <span className="hover:text-yellow-300 transition-all duration-300">AstroGuru</span>
-          </Link>
-        </div></div>
-
+          <div className="text-3xl font-extrabold tracking-wide">
+            <Link href="/">
+              <span className="hover:text-yellow-300 transition-all duration-300">AstroGuru</span>
+            </Link>
+          </div>
+        </div>
 
         <nav className="hidden md:flex space-x-8 items-center">
           <Link href="#hero">

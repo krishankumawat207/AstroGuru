@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { FaStar, FaBullseye, FaLightbulb, FaUsers } from "react-icons/fa";
 
 export default function AboutUs() {
@@ -9,7 +10,7 @@ export default function AboutUs() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-yellow-400">About AstroGuru</h1>
           <p className="text-lg text-indigo-200 mt-4">
-            Unlock the secrets of the universe with astrology's ancient wisdom and modern insights.
+            Unlock the secrets of the universe with astrology&apos;s ancient wisdom and modern insights.
           </p>
         </div>
 
@@ -43,10 +44,12 @@ export default function AboutUs() {
                 key={index}
                 className="bg-indigo-700 p-6 rounded-xl shadow-md hover:shadow-2xl transition duration-300 text-center"
               >
-                <img
+                <Image
                   src={expert.image}
                   alt={expert.name}
-                  className="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-yellow-400"
+                  width={128}
+                  height={128}
+                  className="object-cover rounded-full mx-auto mb-4 border-4 border-yellow-400"
                 />
                 <h3 className="text-xl font-semibold text-yellow-400">{expert.name}</h3>
                 <p className="text-indigo-100">{expert.role}</p>
@@ -65,7 +68,7 @@ export default function AboutUs() {
             </li>
             <li className="flex items-center">
               <FaLightbulb className="text-yellow-400 text-2xl mr-3" />
-              Provide deep insights into life’s mysteries with expert readings.
+              Provide deep insights into life&apos;s mysteries with expert readings.
             </li>
             <li className="flex items-center">
               <FaUsers className="text-yellow-400 text-2xl mr-3" />

@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Services() {
   const [loaded, setLoaded] = useState(false);
@@ -68,10 +69,12 @@ export default function Services() {
               className="bg-gradient-to-br from-gray-800 to-black p-8 rounded-2xl shadow-2xl hover:scale-105 transform transition duration-500 text-center border border-yellow-400 hover:border-red-500"
             >
               <div className="overflow-hidden rounded-xl">
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
                   className="w-full h-64 object-cover rounded-xl transform transition duration-500 hover:scale-110 border-4 border-yellow-500"
+                  width={500} // Set the width
+                  height={256} // Set the height
                 />
               </div>
               <h3 className="text-3xl font-bold text-yellow-400 mt-6 mb-4 drop-shadow-lg">

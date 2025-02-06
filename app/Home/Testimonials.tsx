@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+
 const Testimonials = () => {
   const testimonials = [
     {
@@ -41,10 +43,12 @@ const Testimonials = () => {
               className="bg-gray-800 p-8 rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-300 transform hover:scale-105"
             >
               <div className="mb-6 flex justify-center">
-                <img
+                <Image
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-32 h-32 rounded-full object-cover border-4 border-yellow-500"
+                  width={128}
+                  height={128}
                 />
               </div>
               <h3 className="text-2xl font-semibold text-yellow-500 mb-2">{testimonial.name}</h3>
