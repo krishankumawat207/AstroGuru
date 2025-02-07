@@ -2,8 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
-import Image from "next/image"; // Added for image optimization
-
+import Image from "next/image"; 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const toggleMenu = () => {
