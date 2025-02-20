@@ -5,7 +5,6 @@ import Contact from "./Home/contact";
 import Footer from "./Home/Footer";
 import Header from "./Home/Header";
 import HeroSection from "./Home/HeroSection";
-import Pricing from "./Home/Pricing";
 import Services from "./Home/Services";
 import Testimonials from "./Home/Testimonials";
 
@@ -37,9 +36,6 @@ const Home: React.FC = () => {
       </div> 
       <div id="contact" className="bg-lightPrimary">
         <Contact />
-      </div>
-      <div id="Pricing" className="bg-lightPrimary">
-        <Pricing/>
       </div>
      
       

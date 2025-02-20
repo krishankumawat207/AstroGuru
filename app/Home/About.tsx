@@ -1,86 +1,86 @@
 "use client";
-import React from "react";
+
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaStar, FaBullseye, FaLightbulb, FaUsers } from "react-icons/fa";
+import Link from "next/link";
+import { FaYinYang, FaChartLine, FaStar, FaSun, FaMoon, FaMagic, FaBookOpen, FaPrayingHands, FaOm, FaHandsHelping, FaPhoneAlt, FaEnvelope, FaGlobe, FaEye, FaBible, FaWhatsapp, FaArrowUp, FaHome, FaAward, FaCertificate } from "react-icons/fa";
 
-export default function AboutUs() {
+export default function About() {
+  const [isClient, setIsClient] = useState(false);
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    const handleScroll = () => {
+      setShowScroll(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section className="bg-indigo-800 text-white py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-yellow-400">About AstroGuru</h1>
-          <p className="text-lg text-indigo-200 mt-4">
-            Unlock the secrets of the universe with astrology&apos;s ancient wisdom and modern insights.
-          </p>
+    <div className="relative min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-black text-gray-100 overflow-hidden">
+      {/* Back to Home Button */}
+      <Link
+        href="/"
+        className="fixed top-5 left-5 bg-gray-800 text-white p-3 rounded-full shadow-lg 
+                   hover:bg-gray-700 transition-all duration-300 cursor-pointer z-[9999] pointer-events-auto"
+      >
+        <FaHome className="text-2xl" />
+      </Link>
+
+      {/* Hero Section with Background Animation */}
+      <div className="relative flex flex-col md:flex-row items-center justify-center px-6 md:px-10 lg:px-20 h-screen text-center md:text-left">
+        {/* Background Animation */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+            className="absolute w-full h-full bg-[url('/astrology-bg.svg')] bg-cover bg-center opacity-30"
+          />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <div>
-          
+        {/* Left Section */}
+        <div className="w-full md:w-1/2 relative z-10">
+          <motion.h1
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-pink-500 drop-shadow-lg"
+          >
+            ✨ Unlock Your Destiny with Guruji
+          </motion.h1>
+          <motion.p className="text-md md:text-lg mt-3 text-gray-300 tracking-wider leading-relaxed">
+            Expert astrologer from Jaipur, specializing in Kundali readings, Vedic rituals, and life guidance. Discover your true path today.
+          </motion.p>
+          <div className="mt-6 flex gap-4 justify-center md:justify-start">
+            <Link href="/about">
+              <button className="bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition">
+                Read More
+              </button>
+            </Link>
+            <Link href="/services">
+              <button className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
+                Explore More Services
+              </button>
+            </Link>
+            <Link href="/contact">
+              <button className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition">
+                Consult Now
+              </button>
+            </Link>
           </div>
         </div>
 
-        <div className="mt-16">
-          <h2 className="text-3xl font-semibold text-yellow-400 text-center mb-6">Meet Our Experts</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Guru Raj",
-                role: "Chief Astrologer",
-                image: "/profile1.jpg",
-              },
-              {
-                name: "Priya Sharma",
-                role: "Numerology Expert",
-                image: "/profile2.webp",
-              },
-              {
-                name: "Arjun Patel",
-                role: "Tarot Card Reader",
-                image: "/profile3.webp",
-              },
-            ].map((expert, index) => (
-              <div
-                key={index}
-                className="bg-indigo-700 p-6 rounded-xl shadow-md hover:shadow-2xl transition duration-300 text-center"
-              >
-                <Image
-                  src={expert.image}
-                  alt={expert.name}
-                  width={128}
-                  height={128}
-                  className="object-cover rounded-full mx-auto mb-4 border-4 border-yellow-400"
-                />
-                <h3 className="text-xl font-semibold text-yellow-400">{expert.name}</h3>
-                <p className="text-indigo-100">{expert.role}</p>
-              </div>
-            ))}
+        {/* Right Image */}
+        <motion.div className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0 relative z-10">
+          <div className="relative">
+            <Image src="/profile1.jpg" alt="Guruji" width={300} height={300} className="rounded-3xl shadow-2xl border-4 border-yellow-500 transition-transform duration-300 transform hover:scale-105" />
           </div>
-        </div>
-
-        {/* Our Mission Section*/}
-        <div className="mt-16 bg-indigo-900 p-10 rounded-xl">
-          <h2 className="text-3xl font-semibold text-yellow-400 text-center mb-6">Our Mission</h2>
-          <ul className="space-y-4 text-indigo-200 text-lg">
-            <li className="flex items-center">
-              <FaBullseye className="text-yellow-400 text-2xl mr-3" />
-              Guide individuals on their spiritual journey through astrology.
-            </li>
-            <li className="flex items-center">
-              <FaLightbulb className="text-yellow-400 text-2xl mr-3" />
-              Provide deep insights into life&apos;s mysteries with expert readings.
-            </li>
-            <li className="flex items-center">
-              <FaUsers className="text-yellow-400 text-2xl mr-3" />
-              Empower individuals with knowledge about their future and growth.
-            </li>
-            <li className="flex items-center">
-              <FaStar className="text-yellow-400 text-2xl mr-3" />
-              Combine ancient wisdom with modern techniques for accurate predictions.
-            </li>
-          </ul>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </div>
   );
 }
