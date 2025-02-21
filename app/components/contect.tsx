@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaArrowUp, FaHome } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+import Footer from '../Home/Footer';
 
 const ContactUs = () => {
   const [selected, setSelected] = useState<'whatsapp' | 'call' | 'mail' | null>(null);
@@ -30,6 +31,7 @@ const ContactUs = () => {
   }, []);
 
   return (
+    <>
     <div className="relative w-full min-h-screen bg-gray-900 text-white flex flex-col items-center">
       {/* Background */}
       <div className="absolute inset-0 bg-cover bg-center w-full h-full" 
@@ -124,6 +126,9 @@ const ContactUs = () => {
         </button>
       )}
     </div>
+    <Footer/>
+    </>
+
   );
 };
 

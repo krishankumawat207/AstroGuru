@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaYinYang, FaChartLine, FaStar, FaSun, FaMoon, FaMagic, FaBookOpen, FaPrayingHands, FaOm, FaHandsHelping, FaPhoneAlt, FaEnvelope, FaGlobe, FaEye, FaBible, FaWhatsapp, FaArrowUp, FaHome, FaAward, FaCertificate } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 
 export default function About() {
   const [isClient, setIsClient] = useState(false);
@@ -24,8 +24,7 @@ export default function About() {
       {/* Back to Home Button */}
       <Link
         href="/"
-        className="fixed top-5 left-5 bg-gray-800 text-white p-3 rounded-full shadow-lg 
-                   hover:bg-gray-700 transition-all duration-300 cursor-pointer z-[9999] pointer-events-auto"
+        className="fixed top-5 left-5 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-all duration-300 cursor-pointer z-[9999] pointer-events-auto"
       >
         <FaHome className="text-2xl" />
       </Link>

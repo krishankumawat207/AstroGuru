@@ -13,7 +13,7 @@ const Header = () => {
           <div className="flex flex-wrap items-center space-x-4">
             <div className="flex items-center space-x-1">
               <FaPhoneAlt className="h-4 w-4" />
-              <a href="tel:+91-9915014230" className="hover:underline">+91-9915014230</a>
+              <a href="tel:+91-xxx-xxx-xxxx" className="hover:underline">+91xxx-xxx-xxxx</a>
             </div>
             <div className="flex items-center space-x-1">
               <FaEnvelope className="h-4 w-4" />
@@ -56,22 +56,25 @@ const Header = () => {
           </div>
         </div>
       </div>
-
       {/* Navigation Bar */}
-      <div className="bg-gradient-to-r from-[#7b1fa2] to-[#3b1e5a] shadow-md py-2">
-        <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-          <nav className="flex items-center space-x-6 text-white font-medium">
-            <Link href="/" className="hover:text-yellow-400 transition-all">Home</Link>
-            <Link href="/about" className="hover:text-yellow-400 transition-all">About</Link>
-            <Link href="/services" className="hover:text-yellow-400 transition-all">Services</Link>
-            <Link href="/#contact">
-              <button className="bg-yellow-400 text-[#3b1e5a] px-4 py-1 rounded hover:bg-yellow-500 transition-all">Contact Now</button>
-            </Link>
-          </nav>
-        </div>
-      </div>
+<div className="bg-gradient-to-r from-[#7b1fa2] to-[#3b1e5a] shadow-md py-2">
+  <div className="max-w-7xl mx-auto px-4 flex justify-center items-center">
+    <nav className="flex items-center space-x-6 text-white font-medium">
+      <Link href="/" className="hover:text-yellow-400 transition-all">Home</Link>
+      <Link href="/about" className="hover:text-yellow-400 transition-all">About</Link>
+      <Link href="/services" className="hover:text-yellow-400 transition-all">Services</Link>
+      <Link href="/contact">
+        <button className="bg-yellow-400 text-[#3b1e5a] px-4 py-1 rounded hover:bg-yellow-500 transition-all">Contact Now</button>
+      </Link>
+    </nav>
+  </div>
+</div>
+
     </header>
   );
 };
 
 export default Header;
+
+
+

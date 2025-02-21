@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
-import Reveal from "react-awesome-reveal";
-import { fadeInDownShorter2, fadeInLeft } from "./keyframes";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaOm } from "react-icons/fa";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -45,21 +43,22 @@ const services = [
   },
 ];
 
-const HeroSection: React.FC = () => {
+const Services: React.FC = () => {
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center font-['Poppins'] bg-gradient-to-b from-black via-gray-900 to-black text-white py-16">
-      <div className="text-center max-w-5xl px-6">
-        <Reveal keyframes={fadeInDownShorter2} duration={1000} delay={200}>
-          <h1 className="text-5xl sm:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-600 drop-shadow-xl">
-            AstroGuru Services
-          </h1>
-        </Reveal>
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center font-['Poppins'] bg-gradient-to-b from-purple-800 via-purple-900 to-black text-white py-16">
+      <div className="flex flex-col items-center my-6">
+        <div className="w-24 h-1 bg-black"></div>
+        <FaOm className="text-5xl text-yellow-600 my-3" />
+        <div className="w-24 h-1 bg-black"></div>
+      </div>
 
-        <Reveal keyframes={fadeInLeft} duration={1000} delay={400}>
-          <p className="text-lg text-gray-300 mt-4 max-w-3xl mx-auto">
-            Unlock the power of the stars with our personalized astrology services, guiding you toward a fulfilled life.
-          </p>
-        </Reveal>
+      <div className="text-center max-w-5xl px-6">
+        <h1 className="text-5xl sm:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 drop-shadow-xl">
+          AstroGuru Services
+        </h1>
+        <p className="text-lg text-gray-300 mt-4 max-w-3xl mx-auto">
+          Unlock the power of the stars with our personalized astrology services, guiding you toward a fulfilled life.
+        </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12 px-6 max-w-7xl">
@@ -69,7 +68,7 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
-            className="bg-gradient-to-br from-black to-gray-900 p-8 rounded-2xl shadow-2xl transform transition duration-500 text-center border border-yellow-400 hover:border-orange-500 hover:scale-105 hover:bg-opacity-90 hover:shadow-yellow-500/50"
+            className="bg-gradient-to-br from-purple-700 to-black p-8 rounded-2xl shadow-2xl transform transition duration-500 text-center border border-yellow-400 hover:border-red-500 hover:scale-105 hover:bg-opacity-90 hover:shadow-purple-500/50"
           >
             <div className="overflow-hidden rounded-xl">
               <Image
@@ -112,4 +111,4 @@ const HeroSection: React.FC = () => {
   );
 };
 
-export default HeroSection;
+export default Services;
