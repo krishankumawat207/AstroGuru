@@ -2,14 +2,9 @@
 
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaHeartBroken, FaBusinessTime, FaBriefcase, FaMoneyBillWave, FaUserFriends } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaHeartBroken, FaBusinessTime, FaBriefcase } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const problemCategories = [
-  { title: "Relationship Problems", icon: <FaHeartBroken />, content: "Astrology solutions for love and relationship issues." },
-  { title: "Business Problems", icon: <FaBusinessTime />, content: "Astrology-based solutions for business growth and challenges." },
-  { title: "Career Problems", icon: <FaBriefcase />, content: "Career guidance using astrological insights." },
-];
 
 const ContactLanding = () => {
   const router = useRouter();
@@ -42,36 +37,37 @@ const ContactLanding = () => {
           <div className="flex flex-col items-center">
             <FaPhoneAlt className="text-yellow-400 text-4xl mb-4" />
             <h3 className="text-xl font-semibold">Call Us</h3>
-            <p>+91 9876543210</p>
+            <p>+91 9587543485</p>
           </div>
           <div className="flex flex-col items-center">
             <FaEnvelope className="text-yellow-400 text-4xl mb-4" />
             <h3 className="text-xl font-semibold">Email Us</h3>
-            <p>contact@astroguru.com</p>
+            <p>Shreechetnajyotishkendra@gmail.com</p>
           </div>
           <div className="flex flex-col items-center">
             <FaWhatsapp className="text-yellow-400 text-4xl mb-4" />
             <h3 className="text-xl font-semibold">WhatsApp</h3>
-            <p>+91 9876543210</p>
+            <p>+91 9587543485</p>
           </div>
         </div>
 
-        <div className="mt-16">
-          <h2 className="text-4xl font-bold text-yellow-400 mb-8">Problems We Solve</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {problemCategories.map((problem, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                className="bg-gray-800 text-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center hover:shadow-2xl transition-all duration-300"
-              >
-                <div className="text-4xl bg-yellow-500 p-4 rounded-full mb-4">
-                  {problem.icon}
-                </div>
-                <h3 className="text-xl font-bold text-yellow-400 mb-2">{problem.title}</h3>
-                <p className="text-sm text-gray-300">{problem.content}</p>
-              </motion.div>
-            ))}
+        <div className="mt-12">
+          <h2 className="text-4xl font-bold text-yellow-400 mb-8">Pandit Gajanand Shastri Ji</h2>
+          <div className="flex flex-col items-center space-y-4">
+            <a
+              href="https://www.instagram.com/world_famous_panditji?igsh=cmcxcTlsZHNjdGZ3"
+              target="_blank"
+              className="text-yellow-400 text-lg hover:underline"
+            >
+              Instagram Profile
+            </a>
+            <a
+              href="https://youtube.com/@panditgajanandshastriji?si=LzWlsPYdChhksuN7"
+              target="_blank"
+              className="text-yellow-400 text-lg hover:underline"
+            >
+              YouTube Channel
+            </a>
           </div>
         </div>
       </div>

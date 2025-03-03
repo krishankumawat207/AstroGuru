@@ -2,10 +2,45 @@
 import { motion } from "framer-motion";
 import {FaOm, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
-// Define your phone number here
-const phoneNumber = "1234567890";
+const phoneNumber = "9587543485";
 
 const services = [
+  {
+    title: "Kundali Matching",
+    description:
+      "Find the perfect life partner with expert Kundali matching services.",
+    image: "/s1.jpg",
+  },
+  {
+    title: "Puja & Havan Services",
+    description:
+      "Perform Vedic rituals and havans for prosperity, health, and success.",
+    image: "/s2.webp",
+  },
+  {
+    title: "Pitru Dosha Remedies",
+    description:
+      "Resolve ancestral imbalances and attain peace through specialized Pitru Dosha rituals.",
+    image: "/s4.avif",
+  },
+  {
+    title: "Vastu Consultation",
+    description:
+      "Align your home or workplace with positive energies through expert Vastu guidance.",
+    image: "/s3.jpg",
+  },
+  {
+    title: "Birth Chart Analysis",
+    description:
+      "Understand your strengths, challenges, and life's purpose through detailed chart readings.",
+    image: "/s1.jpg",
+  },
+  {
+    title: "Numerology Analysis",
+    description:
+      "Discover how numbers influence your life and destiny through numerology insights.",
+    image: "/s5.avif",
+  },
   { 
     title: "Love Marriage", 
     description: "Want to marry the person you love? Astrology provides the best solution to make it happen.", 

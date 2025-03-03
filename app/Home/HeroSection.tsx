@@ -41,7 +41,7 @@ const HeroSection: React.FC = () => {
 
         <Reveal keyframes={fadeInUp} duration={1000} delay={600}>
   <a
-    href="https://wa.me/91XXXXXXXXXX" 
+    href="https://wa.me/919587543485" 
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center gap-2 bg-green-500 text-white py-3 px-6 rounded-full text-lg font-semibold shadow-xl hover:bg-green-600 transition duration-300"

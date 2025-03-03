@@ -6,28 +6,34 @@ import { motion } from "framer-motion";
 
 const services = [
   {
+    title: "Kundali Matching",
+    description:
+      "Find the perfect life partner with expert Kundali matching services.",
+    image: "/s1.jpg",
+  },
+  {
+    title: "Puja & Havan Services",
+    description:
+      "Perform Vedic rituals and havans for prosperity, health, and success.",
+    image: "/s2.webp",
+  },
+  {
+    title: "Pitru Dosha Remedies",
+    description:
+      "Resolve ancestral imbalances and attain peace through specialized Pitru Dosha rituals.",
+    image: "/s4.avif",
+  },
+  {
+    title: "Vastu Consultation",
+    description:
+      "Align your home or workplace with positive energies through expert Vastu guidance.",
+    image: "/s3.jpg",
+  },
+  {
     title: "Birth Chart Analysis",
     description:
       "Understand your strengths, challenges, and life's purpose through detailed chart readings.",
     image: "/s1.jpg",
-  },
-  {
-    title: "Daily Horoscopes",
-    description:
-      "Stay aligned with cosmic energies through personalized daily horoscope updates.",
-    image: "/s2.jpeg",
-  },
-  {
-    title: "Zodiac Compatibility",
-    description:
-      "Explore your compatibility with others based on zodiac signs and cosmic influence.",
-    image: "/s3.jpg",
-  },
-  {
-    title: "Tarot Card Readings",
-    description:
-      "Gain clarity and guidance for life's questions through intuitive tarot readings.",
-    image: "/s4.jpg",
   },
   {
     title: "Numerology Analysis",
@@ -35,12 +41,8 @@ const services = [
       "Discover how numbers influence your life and destiny through numerology insights.",
     image: "/s5.avif",
   },
-  {
-    title: "Spiritual Counseling",
-    description:
-      "Experience personal growth and healing with our spiritual counseling sessions.",
-    image: "/s6.jpg",
-  },
+
+ 
 ];
 
 const Services: React.FC = () => {
@@ -48,7 +50,7 @@ const Services: React.FC = () => {
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center font-['Poppins'] bg-gradient-to-b from-purple-800 via-purple-900 to-black text-white py-16">
       <div className="flex flex-col items-center my-6">
         <div className="w-24 h-1 bg-black"></div>
-        <FaOm className="text-5xl text-yellow-600 my-3" />
+        <FaOm className="text-5xl text-yellow-500 my-3" />
         <div className="w-24 h-1 bg-black"></div>
       </div>
 
@@ -91,7 +93,7 @@ const Services: React.FC = () => {
 
       <div className="text-center mt-16">
         <a
-          href="https://wa.me/91XXXXXXXXXX"
+          href="https://wa.me/919587543485"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 bg-green-500 text-white py-4 px-8 text-xl rounded-full shadow-lg transform transition duration-500 hover:scale-110 hover:shadow-green-400/50"

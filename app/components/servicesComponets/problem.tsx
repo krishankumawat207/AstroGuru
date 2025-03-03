@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaOm, FaPhoneAlt, FaWhatsapp, FaEnvelope, FaHeartBroken, FaBusinessTime, FaBriefcase, FaUserMd, FaUsers, FaShieldAlt, FaChild, FaBookOpen, FaGem, FaEyeSlash, FaGraduationCap, FaRing, FaFilm, FaPaintBrush, FaMoneyBillWave, FaSadCry } from "react-icons/fa";
+import { FaOm, FaPhoneAlt, FaWhatsapp, FaEnvelope, FaHeartBroken, FaBusinessTime, FaBriefcase, FaUserMd, FaUsers, FaShieldAlt, FaChild, FaBookOpen, FaGem, FaEyeSlash, FaGraduationCap, FaRing, FaFilm, FaPaintBrush, FaMoneyBillWave, FaSadCry, FaInstagram, FaYoutube } from "react-icons/fa";
 
 // Example problem categories
 const problemCategories = [
@@ -61,33 +61,46 @@ const ProblemsSection = () => {
                 activeIndex === index ? "opacity-100" : "opacity-0 md:opacity-0 md:hover:opacity-100"
               }`}
             >
-              <div className="flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-3 mt-4">
-                {/* WhatsApp Icon */}
-                <a
-                  href="https://wa.me/your-whatsapp-number"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600 transition-all duration-300"
-                >
-                  <FaWhatsapp className="text-2xl" /> Chat
-                </a>
+                  <div className="flex flex-col sm:flex-row gap-4">
+      {/* WhatsApp Icon */}
+      <a
+        href="https://wa.me/9587543485"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600 transition-all duration-300"
+      >
+        <FaWhatsapp className="text-2xl" /> 
+      </a>
 
-                {/* Call Icon */}
-                <a
-                  href="tel:+your-phone-number"
-                  className="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-all duration-300"
-                >
-                  <FaPhoneAlt className="text-2xl" /> Call Now
-                </a>
+      {/* Call Icon */}
+      <a
+        href="tel:+919587543485"
+        className="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-all duration-300"
+      >
+        <FaPhoneAlt className="text-2xl" /> 
+      </a>
 
-                {/* Email Icon */}
-                <a
-                  href="mailto:your-email@example.com"
-                  className="flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600 transition-all duration-300"
-                >
-                  <FaEnvelope className="text-2xl" /> Email Us
-                </a>
-              </div>
+      {/* Email Icon */}
+      <a
+        href="mailto:Shreechetnajyotishkendra@gmail.com"
+        className="flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-600 transition-all duration-300"
+      >
+        <FaEnvelope className="text-2xl" /> 
+      </a>
+
+      {/* Instagram Icon */}
+      <a
+        href="https://www.instagram.com/world_famous_panditji"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 bg-purple-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-purple-600 transition-all duration-300"
+      >
+        <FaInstagram className="text-2xl" /> 
+      </a>
+
+     
+    </div>
+
             </motion.div>
           </motion.div>
         ))}

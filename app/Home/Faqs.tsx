@@ -40,20 +40,20 @@ const FAQs: React.FC = () => {
   };
 
   return (
-    <section className="py-12 bg-black text-white">
-      <h2 className="text-4xl font-extrabold text-center mb-10 text-purple-400">Frequently Asked Questions</h2>
-      <div className="max-w-3xl mx-auto space-y-6">
+    <section className="py-12 bg-gray-900 text-white">
+      <h2 className="text-4xl font-bold text-center mb-8 text-blue-400">FAQs</h2>
+      <div className="max-w-2xl mx-auto space-y-6">
         {faqs.map((faq, index) => (
-          <div key={index} className="border border-yellow-400 rounded-xl p-6 bg-gray-900 shadow-lg">
+          <div key={index} className="border border-gray-700 rounded-xl p-5 bg-gray-800 shadow-md">
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full flex justify-between items-center text-left font-semibold text-xl text-purple-300 focus:outline-none"
+              className="w-full flex justify-between items-center text-left font-medium text-lg text-blue-300 focus:outline-none"
             >
               {faq.question}
               {activeIndex === index ? (
-                <FaChevronUp className="text-yellow-400" />
+                <FaChevronUp className="text-blue-400" />
               ) : (
-                <FaChevronDown className="text-yellow-400" />
+                <FaChevronDown className="text-blue-400" />
               )}
             </button>
             <AnimatePresence>
@@ -62,7 +62,7 @@ const FAQs: React.FC = () => {
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
-                  className="mt-4 text-yellow-300 leading-relaxed"
+                  className="mt-3 text-gray-300 leading-relaxed"
                 >
                   {faq.answer}
                 </motion.p>
